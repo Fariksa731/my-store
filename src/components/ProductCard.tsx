@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Product = {
   id: number;
   name: string;
@@ -8,9 +10,11 @@ type Product = {
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="p-4 border rounded-lg shadow-md hover:shadow-lg transition">
-      <img
+      <Image
         src={product.image}
         alt={product.name}
+        width={300}
+        height={200}
         className="w-full h-40 object-cover rounded-md"
       />
       <h2 className="text-lg font-bold mt-2">{product.name}</h2>
