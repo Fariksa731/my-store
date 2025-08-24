@@ -1,4 +1,11 @@
-export default function ProductCard({ product }: { product: any }) {
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+};
+
+export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="p-4 border rounded-lg shadow-md hover:shadow-lg transition">
       <img
